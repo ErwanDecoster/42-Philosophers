@@ -6,7 +6,7 @@
 #    By: edecoste <edecoste@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/15 13:46:33 by edecoste          #+#    #+#              #
-#    Updated: 2023/08/01 17:25:03 by edecoste         ###   ########.fr        #
+#    Updated: 2023/08/02 16:56:21 by edecoste         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = philo
 
 CC = gcc
 
-FLAGS = -Werror -Wall -Wextra -g3 -fsanitize=address
+FLAGS = -Werror -Wall -Wextra -pthread -g3 -fsanitize=address
 
 RM = rm -rf
 

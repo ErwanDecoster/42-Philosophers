@@ -6,33 +6,19 @@
 /*   By: edecoste <edecoste@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 13:28:52 by edecoste          #+#    #+#             */
-/*   Updated: 2023/08/01 17:22:34 by edecoste         ###   ########.fr       */
+/*   Updated: 2023/08/02 16:25:08 by edecoste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHILOSOPHERS_H
 # define PHILOSOPHERS_H
 
-/* to write, read, close, access, pipe, dup, dup2, execve, fork */
 # include <unistd.h>
-//# include <sys/types.h>
-# include <sys/uio.h>
-/* malloc, free, exit */
 # include <stdlib.h>
-/* open, unlink */
-# include <fcntl.h>
-/* waitpid, wait */
-# include <sys/wait.h>
-/* strerror */
-# include <string.h>
-/*to perror*/
 # include <stdint.h>
-# include <errno.h>
-
-
 # include <pthread.h>
 # include <sys/time.h>
-
+# include <stdio.h>
 
 # define BAD_ARG "Error: Bad argument, must be a number"
 # define BAD_ARG_NB "Error: Bad argument number, philo need 4 or 5 arguments"
@@ -49,6 +35,8 @@ typedef struct s_data
 	int				tt_sleep;
 	int				eat_x_times;
 	long long		start_time;
+	pthread_mutex_t	*m_forks;
+	int				*forks;
 	struct s_philo	*philo;
 }	t_data;
 
@@ -57,8 +45,9 @@ typedef struct s_philo
 	t_data		*data;
 	int			id;
 	int			is_dead;
-	int			l_fork;
-	int			r_fork;
+	int			nb_ate;
+	int			l_fork_id;
+	int			r_fork_id;
 	pthread_t	thread;
 }	t_philo;
 
