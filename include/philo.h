@@ -6,7 +6,7 @@
 /*   By: edecoste <edecoste@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 13:28:52 by edecoste          #+#    #+#             */
-/*   Updated: 2023/08/02 16:25:08 by edecoste         ###   ########.fr       */
+/*   Updated: 2023/08/28 15:08:24 by edecoste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include <sys/time.h>
 # include <stdio.h>
 
-# define BAD_ARG "Error: Bad argument, must be a number"
+# define BAD_ARG "Error: Bad argument, must be a number greater than 0"
 # define BAD_ARG_NB "Error: Bad argument number, philo need 4 or 5 arguments"
 # define MALLOC "Error: Malloc failure"
 # define TRHREAD_CR "Error: pthread_create failure"
@@ -35,7 +35,9 @@ typedef struct s_data
 	int				tt_sleep;
 	int				eat_x_times;
 	long long		start_time;
+	int				death_philo;
 	pthread_mutex_t	*m_forks;
+	pthread_mutex_t	pause;
 	int				*forks;
 	struct s_philo	*philo;
 }	t_data;
@@ -46,6 +48,7 @@ typedef struct s_philo
 	int			id;
 	int			is_dead;
 	int			nb_ate;
+	int			last_ate_time;
 	int			l_fork_id;
 	int			r_fork_id;
 	pthread_t	thread;
