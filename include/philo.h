@@ -6,7 +6,7 @@
 /*   By: edecoste <edecoste@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 13:28:52 by edecoste          #+#    #+#             */
-/*   Updated: 2023/08/28 15:08:24 by edecoste         ###   ########.fr       */
+/*   Updated: 2023/08/29 17:49:33 by edecoste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,33 +48,31 @@ typedef struct s_philo
 	int			id;
 	int			is_dead;
 	int			nb_ate;
-	int			last_ate_time;
+	long long	last_ate_time;
 	int			l_fork_id;
 	int			r_fork_id;
 	pthread_t	thread;
 }	t_philo;
 
 /********************************************************************* main.c */
-void	childs(t_data *pipex, char **av, char **envp);
+void		childs(t_data *pipex, char **av, char **envp);
 
 /***************************************************************** ft_bzero.c */
-void	ft_bzero(void *s, size_t n);
+void		ft_bzero(void *s, size_t n);
 
 /**************************************************************** ft_calloc.c */
-void	*ft_calloc(size_t count, size_t size);
+void		*ft_calloc(size_t count, size_t size);
 
 /************************************************************ ft_putendl_fd.c */
-void	ft_putendl_fd(char *s, int fd);
+void		ft_putendl_fd(char *s, int fd);
 
 /************************************************************* ft_putstr_fd.c */
-int	ft_putstr_fd(char *s, int fd);
+int			ft_putstr_fd(char *s, int fd);
 
 /****************************************************************** ft_atoi.c */
-int	ft_atoi(const char *str);
+int			ft_atoi(const char *str);
 
 /******************************************************************** utils.c */
 long long	get_time(void);
-
-
 
 #endif
