@@ -6,7 +6,7 @@
 /*   By: edecoste <edecoste@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 13:28:52 by edecoste          #+#    #+#             */
-/*   Updated: 2023/08/29 17:49:33 by edecoste         ###   ########.fr       */
+/*   Updated: 2023/08/30 14:57:28 by edecoste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ typedef struct s_data
 	int				tt_eat;
 	int				tt_sleep;
 	int				eat_x_times;
-	long long		start_time;
+	long long		st_t;
 	int				death_philo;
 	pthread_mutex_t	*m_forks;
 	pthread_mutex_t	pause;
@@ -54,25 +54,41 @@ typedef struct s_philo
 	pthread_t	thread;
 }	t_philo;
 
-/********************************************************************* main.c */
-void		childs(t_data *pipex, char **av, char **envp);
-
-/***************************************************************** ft_bzero.c */
-void		ft_bzero(void *s, size_t n);
-
-/**************************************************************** ft_calloc.c */
-void		*ft_calloc(size_t count, size_t size);
-
-/************************************************************ ft_putendl_fd.c */
-void		ft_putendl_fd(char *s, int fd);
-
-/************************************************************* ft_putstr_fd.c */
-int			ft_putstr_fd(char *s, int fd);
 
 /****************************************************************** ft_atoi.c */
 int			ft_atoi(const char *str);
 
+/************************************************************** libft_utils.c */
+void		ft_bzero(void *s, size_t n);
+void		*ft_calloc(size_t count, size_t size);
+void		ft_putendl_fd(char *s, int fd);
+int			ft_putstr_fd(char *s, int fd);
+
 /******************************************************************** utils.c */
 long long	get_time(void);
+void		ft_usleep(long long waiting);
+int			check_arg(int arc, char **arv);
+
+/********************************************************************* main.c */
+int			threads_init(t_data *data);
+int			philo_init(t_data *data);
+int			data_init(t_data *data, int arc, char **arv);
+int			main(int arc, char **arv);
+
+/****************************************************************** actions.c */
+int			sleeping(t_philo *philo);
+int			think(t_philo *philo);
+int			eat(t_philo *philo);
+void		*philo_routine(void *arg);
+
+/************************************************************* fork_gestion.c */
+int			release_fork(t_philo *philo, int fork_id);
+int			get_fork(t_philo *philo, int fork_id);
+int			get_forks(t_philo *philo);
+
+/************************************************************* fork_gestion.c */
+int			is_death(t_philo *philo);
+int			check_death(t_philo *philo);
+static int	check_death_loop(t_data *data);
 
 #endif
