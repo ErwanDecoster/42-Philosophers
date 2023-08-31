@@ -6,7 +6,7 @@
 /*   By: edecoste <edecoste@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 13:21:26 by edecoste          #+#    #+#             */
-/*   Updated: 2023/08/30 13:21:56 by edecoste         ###   ########.fr       */
+/*   Updated: 2023/08/31 13:02:05 by edecoste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int	is_death(t_philo *philo)
 {
-	pthread_mutex_lock(&philo->data->pause);
+	pthread_mutex_lock(&philo->data->m_pause);
 	if (philo->is_dead == 1)
-		return (pthread_mutex_unlock(&philo->data->pause), 1);
-	return (pthread_mutex_unlock(&philo->data->pause), 0);
+		return (pthread_mutex_unlock(&philo->data->m_pause), 1);
+	return (pthread_mutex_unlock(&philo->data->m_pause), 0);
 }
 
 int	check_death(t_philo *philo)
@@ -38,7 +38,7 @@ int	check_death(t_philo *philo)
 	return (1);
 }
 
-static int	check_death_loop(t_data *data)
+int	check_death_loop(t_data *data)
 {
 	int	i;
 
@@ -48,13 +48,13 @@ static int	check_death_loop(t_data *data)
 		i = -1;
 		while (++i < data->nb_philos)
 		{
-			pthread_mutex_lock(&data->pause);
+			pthread_mutex_lock(&data->m_pause);
 			if (data->philo->nb_ate == data->eat_x_times)
-				return (pthread_mutex_unlock(&data->pause), 1);
+				return (pthread_mutex_unlock(&data->m_pause), 1);
 			if (data->philo[i].last_ate_time != 0)
 				if (!check_death(&data->philo[i]))
-					return (pthread_mutex_unlock(&data->pause), 0);
-			pthread_mutex_unlock(&data->pause);
+					return (pthread_mutex_unlock(&data->m_pause), 0);
+			pthread_mutex_unlock(&data->m_pause);
 		}
 	}
 }

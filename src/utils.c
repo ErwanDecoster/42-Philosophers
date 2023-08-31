@@ -6,7 +6,7 @@
 /*   By: edecoste <edecoste@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 17:20:56 by edecoste          #+#    #+#             */
-/*   Updated: 2023/08/30 13:24:25 by edecoste         ###   ########.fr       */
+/*   Updated: 2023/08/31 13:04:21 by edecoste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,14 @@ int	check_arg(int arc, char **arv)
 		i++;
 	}
 	return (1);
+}
+
+void	destroy_mutex(t_data *data)
+{
+	int	i;
+
+	i = 0;
+	while (i++ < data->nb_philos)
+		pthread_mutex_destroy(&data->m_forks[i]);
+	pthread_mutex_destroy(&data->m_pause);
 }

@@ -6,7 +6,7 @@
 #    By: edecoste <edecoste@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/15 13:46:33 by edecoste          #+#    #+#              #
-#    Updated: 2023/08/02 16:56:21 by edecoste         ###   ########.fr        #
+#    Updated: 2023/08/30 15:22:58 by edecoste         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,13 +18,13 @@ FLAGS = -Werror -Wall -Wextra -pthread -g3 -fsanitize=address
 
 RM = rm -rf
 
-SRCS = 	main.c \
+SRCS = 	actions.c \
+		death_gestion.c \
+		fork_gestion.c \
 		ft_atoi.c \
-		ft_bzero.c \
-		ft_calloc.c \
-		ft_putendl_fd.c \
-		ft_putstr_fd.c \
-		utils.c \
+		libft_utils.c \
+		main.c \
+		utils.c
 
 OBJS 			= ${SRCS:%.c=./build/%.o}
 

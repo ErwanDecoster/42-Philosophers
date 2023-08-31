@@ -6,7 +6,7 @@
 /*   By: edecoste <edecoste@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 13:17:19 by edecoste          #+#    #+#             */
-/*   Updated: 2023/08/30 13:22:30 by edecoste         ###   ########.fr       */
+/*   Updated: 2023/08/31 13:01:26 by edecoste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ int	think(t_philo *philo)
 {
 	long long	actual_time;
 
-	pthread_mutex_lock(&philo->data->pause);
+	pthread_mutex_lock(&philo->data->m_pause);
 	actual_time = get_time() - philo->data->st_t;
 	if (philo->data->death_philo == 0)
 		printf("%lld %d is thinking\n", actual_time, philo->id);
-	pthread_mutex_unlock(&philo->data->pause);
+	pthread_mutex_unlock(&philo->data->m_pause);
 	return (1);
 }
 
@@ -44,7 +44,7 @@ int	eat(t_philo *philo)
 	get_forks(philo);
 	if (is_death(philo) == 0)
 	{
-		pthread_mutex_lock(&philo->data->pause);
+		pthread_mutex_lock(&philo->data->m_pause);
 		time = get_time();
 		if (philo->data->death_philo == 0)
 			printf("%lld %d is eating\n", time - philo->data->st_t, philo->id);
@@ -63,12 +63,13 @@ void	*philo_routine(void *arg)
 	t_philo	*philo;
 
 	philo = (t_philo *)arg;
-	pthread_mutex_lock(&philo->data->pause);
+	pthread_mutex_lock(&philo->data->m_pause);
 	philo->last_ate_time = get_time();
 	pthread_mutex_unlock(&philo->data->pause);
 	if (philo->id % 2)
 		usleep(200);
-	while (philo->data->eat_x_times == -1 || philo->nb_ate < philo->data->eat_x_times)
+	while (philo->data->eat_x_times == -1 || \
+		philo->nb_ate < philo->data->eat_x_times)
 	{
 		think(philo);
 		if (is_death(philo))

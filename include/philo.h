@@ -6,12 +6,12 @@
 /*   By: edecoste <edecoste@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 13:28:52 by edecoste          #+#    #+#             */
-/*   Updated: 2023/08/30 14:57:28 by edecoste         ###   ########.fr       */
+/*   Updated: 2023/08/31 13:10:14 by edecoste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHILOSOPHERS_H
-# define PHILOSOPHERS_H
+#ifndef PHILO_H
+# define PHILO_H
 
 # include <unistd.h>
 # include <stdlib.h>
@@ -35,9 +35,9 @@ typedef struct s_data
 	int				tt_sleep;
 	int				eat_x_times;
 	long long		st_t;
+	pthread_mutex_t	m_pause;
 	int				death_philo;
 	pthread_mutex_t	*m_forks;
-	pthread_mutex_t	pause;
 	int				*forks;
 	struct s_philo	*philo;
 }	t_data;
@@ -54,7 +54,6 @@ typedef struct s_philo
 	pthread_t	thread;
 }	t_philo;
 
-
 /****************************************************************** ft_atoi.c */
 int			ft_atoi(const char *str);
 
@@ -68,6 +67,7 @@ int			ft_putstr_fd(char *s, int fd);
 long long	get_time(void);
 void		ft_usleep(long long waiting);
 int			check_arg(int arc, char **arv);
+void		destroy_mutex(t_data *data);
 
 /********************************************************************* main.c */
 int			threads_init(t_data *data);
@@ -86,9 +86,9 @@ int			release_fork(t_philo *philo, int fork_id);
 int			get_fork(t_philo *philo, int fork_id);
 int			get_forks(t_philo *philo);
 
-/************************************************************* fork_gestion.c */
+/************************************************************ death_gestion.c */
 int			is_death(t_philo *philo);
 int			check_death(t_philo *philo);
-static int	check_death_loop(t_data *data);
+int			check_death_loop(t_data *data);
 
 #endif

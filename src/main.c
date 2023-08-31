@@ -6,7 +6,7 @@
 /*   By: edecoste <edecoste@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 12:01:34 by edecoste          #+#    #+#             */
-/*   Updated: 2023/08/30 13:24:22 by edecoste         ###   ########.fr       */
+/*   Updated: 2023/08/31 13:10:59 by edecoste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,20 @@ int	threads_init(t_data *data)
 	int	i;
 
 	i = -1;
-	pthread_mutex_lock(&data->pause);
+	pthread_mutex_lock(&data->m_pause);
 	data->st_t = get_time();
 	while (++i < data->nb_philos)
 	{
-		if (pthread_create(&data->philo[i].thread, NULL, philo_routine, &data->philo[i]))
+		if (pthread_create(&data->philo[i].thread, NULL, philo_routine, \
+			&data->philo[i]))
 		{
 			free(data->philo);
 			ft_putendl_fd(TRHREAD_CR, 1);
-			pthread_mutex_unlock(&data->pause);
+			pthread_mutex_unlock(&data->m_pause);
 			return (0);
 		}
 	}
-	pthread_mutex_unlock(&data->pause);
+	pthread_mutex_unlock(&data->m_pause);
 	check_death_loop(data);
 	i = -1;
 	while (++i < data->nb_philos)
@@ -76,7 +77,8 @@ int	data_init(t_data *data, int arc, char **arv)
 		return (free(data->philo), ft_putendl_fd(MALLOC, 1), 0);
 	data->forks = ft_calloc(data->nb_philos, sizeof(int));
 	if (!data->forks)
-		return (free(data->philo), free(data->m_forks), ft_putendl_fd(MALLOC, 1), 0);
+		return (free(data->philo), free(data->m_forks), \
+			ft_putendl_fd(MALLOC, 1), 0);
 	philo_init(data);
 	return (1);
 }
@@ -93,6 +95,7 @@ int	main(int arc, char **arv)
 	if (!data_init(&data, arc, arv))
 		return (0);
 	threads_init(&data);
+	destroy_mutex(&data);
 	free(data.philo);
 	free(data.m_forks);
 	free(data.forks);
