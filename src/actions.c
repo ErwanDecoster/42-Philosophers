@@ -6,7 +6,7 @@
 /*   By: edecoste <edecoste@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 13:17:19 by edecoste          #+#    #+#             */
-/*   Updated: 2023/08/31 13:01:26 by edecoste         ###   ########.fr       */
+/*   Updated: 2023/08/31 14:21:17 by edecoste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int	eat(t_philo *philo)
 			printf("%lld %d is eating\n", time - philo->data->st_t, philo->id);
 		philo->last_ate_time = time;
 		philo->nb_ate++;
-		pthread_mutex_unlock(&philo->data->pause);
+		pthread_mutex_unlock(&philo->data->m_pause);
 		usleep(philo->data->tt_eat * 1000);
 	}
 	release_fork(philo, philo->l_fork_id);
@@ -65,7 +65,7 @@ void	*philo_routine(void *arg)
 	philo = (t_philo *)arg;
 	pthread_mutex_lock(&philo->data->m_pause);
 	philo->last_ate_time = get_time();
-	pthread_mutex_unlock(&philo->data->pause);
+	pthread_mutex_unlock(&philo->data->m_pause);
 	if (philo->id % 2)
 		usleep(200);
 	while (philo->data->eat_x_times == -1 || \
