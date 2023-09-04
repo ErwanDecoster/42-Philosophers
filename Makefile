@@ -6,7 +6,7 @@
 #    By: edecoste <edecoste@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/15 13:46:33 by edecoste          #+#    #+#              #
-#    Updated: 2023/09/04 14:00:12 by edecoste         ###   ########.fr        #
+#    Updated: 2023/09/04 15:39:30 by edecoste         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,12 +19,10 @@ FLAGS = -Werror -Wall -Wextra -pthread #-g3 -fsanitize=thread
 RM = rm -rf
 
 SRCS = 	actions.c \
-		errors.c \
-		exec.c \
-		init.c \
-		lib.c \
+		libft_utils.c \
 		main.c \
-		utils.c
+		utils.c \
+		error_and_death_gestion.c
 
 OBJS 			= ${SRCS:%.c=./build/%.o}
 

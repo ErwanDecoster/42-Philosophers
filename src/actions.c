@@ -6,21 +6,20 @@
 /*   By: edecoste <edecoste@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/16 11:04:29 by edecoste          #+#    #+#             */
-/*   Updated: 2023/09/04 14:09:50 by edecoste         ###   ########.fr       */
+/*   Updated: 2023/09/04 16:36:21 by edecoste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "../philosophers.h"
 #include "../include/philo.h"
 
-void	release_forks(t_philo *philo, int fork)
+static void	release_fork(t_philo *philo, int fork)
 {
 	pthread_mutex_lock(&philo->data->m_forks[fork]);
 	philo->data->forks_id[fork] = 0;
 	pthread_mutex_unlock(&philo->data->m_forks[fork]);
 }
 
-int	think(t_philo *philo)
+static int	think(t_philo *philo)
 {
 	long long	time;
 
@@ -32,7 +31,7 @@ int	think(t_philo *philo)
 	return (1);
 }
 
-int	sleeping(t_philo *philo)
+static int	sleeping(t_philo *philo)
 {
 	long long	time;
 
@@ -45,7 +44,7 @@ int	sleeping(t_philo *philo)
 	return (1);
 }
 
-int	eat(t_philo *philo)
+static int	eat(t_philo *philo)
 {
 	long long	time;
 
@@ -60,27 +59,36 @@ int	eat(t_philo *philo)
 		pthread_mutex_unlock(&philo->data->m_pause);
 		usleep(philo->data->tt_eat * 1000);
 	}
-	release_forks(philo, philo->l_fork);
-	release_forks(philo, philo->r_fork);
+	release_fork(philo, philo->l_fork_id);
+	release_fork(philo, philo->r_fork_id);
 	return (1);
 }
 
-void	action(t_philo *philo, t_data *data)
+void	*philo_routine(void *arg)
 {
-	while (philo->meals != data->eat_x_times)
+	t_philo		*philo;
+
+	philo = (t_philo *)arg;
+	pthread_mutex_lock(&philo->data->m_pause);
+	philo->last_meal_time = get_time();
+	pthread_mutex_unlock(&philo->data->m_pause);
+	if (philo->id % 2 != 0)
+		usleep(20000);
+	while (philo->meals != philo->data->eat_x_times)
 	{
 		think(philo);
 		if (is_dead(philo) == 1)
-			return ;
+			return (NULL);
 		eat(philo);
-		if (philo->meals == data->eat_x_times)
+		if (philo->meals == philo->data->eat_x_times)
 			break ;
 		sleeping(philo);
 	}
-	if (philo->meals == data->eat_x_times)
+	if (philo->meals == philo->data->eat_x_times)
 	{
 		pthread_mutex_lock(&philo->data->m_pause);
 		printf("Philo %d is done eating\n", philo->id);
 		pthread_mutex_unlock(&philo->data->m_pause);
 	}
+	return (NULL);
 }

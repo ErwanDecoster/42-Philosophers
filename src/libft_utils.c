@@ -1,17 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lib.c                                              :+:      :+:    :+:   */
+/*   libft_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edecoste <edecoste@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 14:32:10 by edecoste          #+#    #+#             */
-/*   Updated: 2023/09/04 14:06:49 by edecoste         ###   ########.fr       */
+/*   Updated: 2023/09/04 16:34:01 by edecoste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "../philosophers.h"
 #include "../include/philo.h"
+
+void	putendl_fd(char *s, int fd)
+{
+	size_t	i;
+	int		rt_val;
+
+	i = 0;
+	rt_val = 0;
+	if (!s)
+		putendl_fd("(null)", fd);
+	else
+	{
+		while (s[i])
+			i++;
+		rt_val = write(fd, s, i);
+		if (rt_val == -1)
+			return ;
+	}
+	write(fd, "\n", 2);
+	return ;
+}
 
 int	ft_atoi(const char *str)
 {
@@ -40,13 +60,6 @@ int	ft_atoi(const char *str)
 	return ((int)output);
 }
 
-int	ft_isdigit(int c)
-{
-	if (c >= 48 && c <= 57)
-		return (1);
-	return (0);
-}
-
 void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*str;
@@ -55,10 +68,7 @@ void	ft_bzero(void *s, size_t n)
 	str = (unsigned char *)s;
 	i = 0;
 	while (i < n)
-	{
-		str[i] = 0;
-		i++;
-	}
+		str[i++] = 0;
 }
 
 void	ft_usleep(long long waiting)

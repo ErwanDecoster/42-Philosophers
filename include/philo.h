@@ -6,7 +6,7 @@
 /*   By: edecoste <edecoste@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 13:28:52 by edecoste          #+#    #+#             */
-/*   Updated: 2023/09/04 14:11:58 by edecoste         ###   ########.fr       */
+/*   Updated: 2023/09/04 16:06:04 by edecoste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,49 +46,32 @@ typedef struct s_data
 typedef struct s_philo
 {
 	t_data			*data;
-	int				nb_philos;
 	int				id;
 	long long		last_meal_time;
 	int				meals;
 	int				dead;
 	pthread_t		thread;
-	int				l_fork;
-	int				r_fork;
+	int				l_fork_id;
+	int				r_fork_id;
 }				t_philo;
+
+/*	actions	*/
+void		*philo_routine(void *arg);
+
+/*	error_and_death_gestion.c	*/
+int			error_check(int argc, char **argv);
+int			death_check_loop(t_data *data);
 
 /*	main.c	*/
 int			main(int argc, char **argv);
 
-/*	actions	*/
-void		release_forks(t_philo *philo, int fork);
-void		action(t_philo *philo, t_data *data);
-int			sleeping(t_philo *philo);
-int			think(t_philo *philo);
-int			eat(t_philo *philo);
-
-/*	errors.c	*/
-int			error_check(int argc, char **argv);
-void		error_display(char *msg);
-
-/*	exec.c	*/
-int			threads_init(t_data *data);
-void		*philo_routine(void *arg);
-int			check_death(t_philo *philo);
-int			death_check_loop(t_data *data);
-
-/*	init.c	*/
-int			philo_init(t_data *data);
-int			mutex_init(t_data *data);
-int			data_init(t_data *data, char **argv);
-
-/*	lib.c	*/
+/*	libft_utils.c	*/
+void		putendl_fd(char *s, int fd);
 int			ft_atoi(const char *str);
-int			ft_isdigit(int c);
 void		ft_bzero(void *s, size_t n);
 void		ft_usleep(long long waiting);
 
 /*	utils.c	*/
-int			check_fork(t_philo *philo, int fork);
 int			get_forks(t_philo *philo);
 int			is_dead(t_philo *philo);
 long long	get_time(void);
