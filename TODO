@@ -1,4 +1,0 @@
-- regler le comportement de ce test : ./philo 9 800 200 200 5
-- les philos doivent continuer leurs rontine tant que tous le mondes na pas mange
-- verification des paramettre a revoir "21te" ne doit pas etre valide
-- ce test devrai fonctionner ./philo 200 800 200 200
