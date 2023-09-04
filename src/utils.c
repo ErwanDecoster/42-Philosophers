@@ -6,14 +6,14 @@
 /*   By: edecoste <edecoste@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/16 10:20:45 by edecoste          #+#    #+#             */
-/*   Updated: 2023/09/04 14:07:40 by edecoste         ###   ########.fr       */
+/*   Updated: 2023/09/04 14:11:47 by edecoste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include "../philosophers.h"
 #include "../include/philo.h"
 
-static int	check_fork(t_philo *philo, int fork)
+int	check_fork(t_philo *philo, int fork)
 {
 	long long	time;
 

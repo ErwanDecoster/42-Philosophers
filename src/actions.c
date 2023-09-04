@@ -6,14 +6,14 @@
 /*   By: edecoste <edecoste@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/16 11:04:29 by edecoste          #+#    #+#             */
-/*   Updated: 2023/09/04 14:07:12 by edecoste         ###   ########.fr       */
+/*   Updated: 2023/09/04 14:09:50 by edecoste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include "../philosophers.h"
 #include "../include/philo.h"
 
-static void	release_forks(t_philo *philo, int fork)
+void	release_forks(t_philo *philo, int fork)
 {
 	pthread_mutex_lock(&philo->data->m_forks[fork]);
 	philo->data->forks_id[fork] = 0;
@@ -32,7 +32,7 @@ int	think(t_philo *philo)
 	return (1);
 }
 
-static int	sleeping(t_philo *philo)
+int	sleeping(t_philo *philo)
 {
 	long long	time;
 
@@ -45,7 +45,7 @@ static int	sleeping(t_philo *philo)
 	return (1);
 }
 
-static int	eat(t_philo *philo)
+int	eat(t_philo *philo)
 {
 	long long	time;
 

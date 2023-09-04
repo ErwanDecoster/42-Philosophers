@@ -6,14 +6,14 @@
 /*   By: edecoste <edecoste@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/29 13:15:53 by edecoste          #+#    #+#             */
-/*   Updated: 2023/09/04 14:06:49 by edecoste         ###   ########.fr       */
+/*   Updated: 2023/09/04 14:10:14 by edecoste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include "../philosophers.h"
 #include "../include/philo.h"
 
-static int	check_death(t_philo *philo)
+int	check_death(t_philo *philo)
 {
 	long long	time;
 
@@ -30,7 +30,7 @@ static int	check_death(t_philo *philo)
 	return (1);
 }
 
-static int	death_check_loop(t_data *data)
+int	death_check_loop(t_data *data)
 {
 	int	i;
 

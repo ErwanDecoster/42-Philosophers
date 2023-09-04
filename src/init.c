@@ -6,14 +6,14 @@
 /*   By: edecoste <edecoste@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 10:22:14 by edecoste          #+#    #+#             */
-/*   Updated: 2023/09/04 14:07:40 by edecoste         ###   ########.fr       */
+/*   Updated: 2023/09/04 14:10:36 by edecoste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include "../philosophers.h"
 #include "../include/philo.h"
 
-static int	mutex_init(t_data *data)
+int	mutex_init(t_data *data)
 {
 	int	i;
 
@@ -38,7 +38,7 @@ static int	mutex_init(t_data *data)
 	return (1);
 }
 
-static int	philo_init(t_data *data)
+int	philo_init(t_data *data)
 {
 	int	i;
 

@@ -6,7 +6,7 @@
 /*   By: edecoste <edecoste@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 13:28:52 by edecoste          #+#    #+#             */
-/*   Updated: 2023/09/04 14:05:50 by edecoste         ###   ########.fr       */
+/*   Updated: 2023/09/04 14:11:58 by edecoste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,11 @@ typedef struct s_philo
 int			main(int argc, char **argv);
 
 /*	actions	*/
+void		release_forks(t_philo *philo, int fork);
 void		action(t_philo *philo, t_data *data);
+int			sleeping(t_philo *philo);
 int			think(t_philo *philo);
+int			eat(t_philo *philo);
 
 /*	errors.c	*/
 int			error_check(int argc, char **argv);
@@ -70,8 +73,12 @@ void		error_display(char *msg);
 /*	exec.c	*/
 int			threads_init(t_data *data);
 void		*philo_routine(void *arg);
+int			check_death(t_philo *philo);
+int			death_check_loop(t_data *data);
 
 /*	init.c	*/
+int			philo_init(t_data *data);
+int			mutex_init(t_data *data);
 int			data_init(t_data *data, char **argv);
 
 /*	lib.c	*/
@@ -81,6 +88,7 @@ void		ft_bzero(void *s, size_t n);
 void		ft_usleep(long long waiting);
 
 /*	utils.c	*/
+int			check_fork(t_philo *philo, int fork);
 int			get_forks(t_philo *philo);
 int			is_dead(t_philo *philo);
 long long	get_time(void);
