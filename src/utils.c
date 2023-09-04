@@ -5,12 +5,62 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: edecoste <edecoste@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/01 17:20:56 by edecoste          #+#    #+#             */
-/*   Updated: 2023/08/31 13:04:21 by edecoste         ###   ########.fr       */
+/*   Created: 2023/08/16 10:20:45 by edecoste          #+#    #+#             */
+/*   Updated: 2023/09/04 14:07:40 by edecoste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// #include "../philosophers.h"
 #include "../include/philo.h"
+
+static int	check_fork(t_philo *philo, int fork)
+{
+	long long	time;
+
+	pthread_mutex_lock(&philo->data->m_forks[fork]);
+	if (philo->data->forks_id[fork] == 0)
+	{
+		philo->data->forks_id[fork] = 1;
+		time = get_time() - philo->data->start_time;
+		printf("%lld %d has taken a fork\n", time, philo->id);
+		pthread_mutex_unlock(&philo->data->m_forks[fork]);
+		return (1);
+	}
+	pthread_mutex_unlock(&philo->data->m_forks[fork]);
+	return (0);
+}
+
+int	get_forks(t_philo *philo)
+{
+	int	left;
+	int	right;
+
+	left = 0;
+	right = 0;
+	while (left == 0 || right == 0)
+	{
+		if (is_dead(philo) == 1)
+			return (0);
+		if (left == 0)
+			left = check_fork(philo, philo->l_fork);
+		if (right == 0)
+			right = check_fork(philo, philo->r_fork);
+		usleep(500);
+	}
+	return (1);
+}
+
+int	is_dead(t_philo *philo)
+{
+	pthread_mutex_lock(&philo->data->m_pause);
+	if (philo->data->death == 1)
+	{
+		pthread_mutex_unlock(&philo->data->m_pause);
+		return (1);
+	}
+	pthread_mutex_unlock(&philo->data->m_pause);
+	return (0);
+}
 
 long long	get_time(void)
 {
@@ -18,41 +68,18 @@ long long	get_time(void)
 
 	if (gettimeofday(&time, NULL) != 0)
 	{
-		ft_putendl_fd(TIME_ERR, 1);
+		error_display(TIME_ERR);
 		return (-1);
 	}
 	return ((time.tv_sec * 1000) + (time.tv_usec / 1000));
 }
 
-void	ft_usleep(long long waiting)
-{
-	long long	time;
-
-	time = get_time();
-	while ((get_time() - time) < waiting)
-		usleep(100);
-}
-
-int	check_arg(int arc, char **arv)
-{
-	int	i;
-
-	i = 1;
-	while (i < arc)
-	{
-		if (ft_atoi(arv[i]) <= 0)
-			return (0);
-		i++;
-	}
-	return (1);
-}
-
-void	destroy_mutex(t_data *data)
+void	destroy_mutexes(t_data *data)
 {
 	int	i;
 
 	i = 0;
-	while (i++ < data->nb_philos)
+	while (++i < data->nb_philos)
 		pthread_mutex_destroy(&data->m_forks[i]);
 	pthread_mutex_destroy(&data->m_pause);
 }

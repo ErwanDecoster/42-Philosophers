@@ -6,7 +6,7 @@
 /*   By: edecoste <edecoste@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 13:28:52 by edecoste          #+#    #+#             */
-/*   Updated: 2023/08/31 13:10:14 by edecoste         ###   ########.fr       */
+/*   Updated: 2023/09/04 14:05:50 by edecoste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@
 # define TRHREAD_CR "Error: pthread_create failure"
 # define THR_JOIN "Error: pthread_join failure"
 # define TIME_ERR "Error: gettimeofday failure"
+# define MUTEX "Error: mutex_init failure"
 
 typedef struct s_data
 {
@@ -33,62 +34,56 @@ typedef struct s_data
 	int				tt_die;
 	int				tt_eat;
 	int				tt_sleep;
+	int				death;
 	int				eat_x_times;
-	long long		st_t;
+	long long		start_time;
 	pthread_mutex_t	m_pause;
-	int				death_philo;
 	pthread_mutex_t	*m_forks;
-	int				*forks;
+	int				*forks_id;
 	struct s_philo	*philo;
-}	t_data;
+}				t_data;
 
 typedef struct s_philo
 {
-	t_data		*data;
-	int			id;
-	int			is_dead;
-	int			nb_ate;
-	long long	last_ate_time;
-	int			l_fork_id;
-	int			r_fork_id;
-	pthread_t	thread;
-}	t_philo;
+	t_data			*data;
+	int				nb_philos;
+	int				id;
+	long long		last_meal_time;
+	int				meals;
+	int				dead;
+	pthread_t		thread;
+	int				l_fork;
+	int				r_fork;
+}				t_philo;
 
-/****************************************************************** ft_atoi.c */
-int			ft_atoi(const char *str);
+/*	main.c	*/
+int			main(int argc, char **argv);
 
-/************************************************************** libft_utils.c */
-void		ft_bzero(void *s, size_t n);
-void		*ft_calloc(size_t count, size_t size);
-void		ft_putendl_fd(char *s, int fd);
-int			ft_putstr_fd(char *s, int fd);
-
-/******************************************************************** utils.c */
-long long	get_time(void);
-void		ft_usleep(long long waiting);
-int			check_arg(int arc, char **arv);
-void		destroy_mutex(t_data *data);
-
-/********************************************************************* main.c */
-int			threads_init(t_data *data);
-int			philo_init(t_data *data);
-int			data_init(t_data *data, int arc, char **arv);
-int			main(int arc, char **arv);
-
-/****************************************************************** actions.c */
-int			sleeping(t_philo *philo);
+/*	actions	*/
+void		action(t_philo *philo, t_data *data);
 int			think(t_philo *philo);
-int			eat(t_philo *philo);
+
+/*	errors.c	*/
+int			error_check(int argc, char **argv);
+void		error_display(char *msg);
+
+/*	exec.c	*/
+int			threads_init(t_data *data);
 void		*philo_routine(void *arg);
 
-/************************************************************* fork_gestion.c */
-int			release_fork(t_philo *philo, int fork_id);
-int			get_fork(t_philo *philo, int fork_id);
-int			get_forks(t_philo *philo);
+/*	init.c	*/
+int			data_init(t_data *data, char **argv);
 
-/************************************************************ death_gestion.c */
-int			is_death(t_philo *philo);
-int			check_death(t_philo *philo);
-int			check_death_loop(t_data *data);
+/*	lib.c	*/
+int			ft_atoi(const char *str);
+int			ft_isdigit(int c);
+void		ft_bzero(void *s, size_t n);
+void		ft_usleep(long long waiting);
+
+/*	utils.c	*/
+int			get_forks(t_philo *philo);
+int			is_dead(t_philo *philo);
+long long	get_time(void);
+void		destroy_mutexes(t_data *data);
 
 #endif

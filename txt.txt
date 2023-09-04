@@ -1,0 +1,1005 @@
+1 2 is thinking
+1 2 has taken a fork
+1 2 has taken a fork
+1 6 is thinking
+1 6 has taken a fork
+1 6 has taken a fork
+1 10 is thinking
+1 10 has taken a fork
+1 10 has taken a fork
+1 12 is thinking
+1 12 has taken a fork
+1 12 has taken a fork
+1 14 is thinking
+1 14 has taken a fork
+1 14 has taken a fork
+2 28 is thinking
+2 28 has taken a fork
+2 28 has taken a fork
+2 32 is thinking
+2 32 has taken a fork
+2 32 has taken a fork
+2 48 is thinking
+2 48 has taken a fork
+2 48 has taken a fork
+2 52 is thinking
+2 52 has taken a fork
+2 52 has taken a fork
+2 54 is thinking
+2 54 has taken a fork
+2 54 has taken a fork
+2 32 is eating
+4 106 is thinking
+4 106 has taken a fork
+4 106 has taken a fork
+4 108 is thinking
+4 108 has taken a fork
+4 108 has taken a fork
+4 108 is eating
+4 132 is thinking
+4 132 has taken a fork
+4 132 has taken a fork
+4 136 is thinking
+4 136 has taken a fork
+4 136 has taken a fork
+5 138 is thinking
+5 138 has taken a fork
+5 138 has taken a fork
+5 140 is thinking
+5 140 has taken a fork
+5 140 has taken a fork
+5 142 is thinking
+5 142 has taken a fork
+5 142 has taken a fork
+5 132 is eating
+5 136 is eating
+5 156 is thinking
+5 156 has taken a fork
+5 156 has taken a fork
+5 140 is eating
+5 164 is thinking
+5 164 has taken a fork
+5 164 has taken a fork
+5 168 is thinking
+5 168 has taken a fork
+5 168 has taken a fork
+6 156 is eating
+6 182 is thinking
+6 182 has taken a fork
+6 182 has taken a fork
+6 186 is thinking
+6 186 has taken a fork
+6 186 has taken a fork
+6 188 is thinking
+6 188 has taken a fork
+6 188 has taken a fork
+6 168 is eating
+6 190 is thinking
+6 190 has taken a fork
+6 190 has taken a fork
+6 194 is thinking
+6 194 has taken a fork
+6 194 has taken a fork
+6 200 is thinking
+6 200 has taken a fork
+6 200 has taken a fork
+6 8 is thinking
+6 18 is thinking
+6 18 has taken a fork
+6 18 has taken a fork
+6 182 is eating
+6 10 is eating
+7 34 is thinking
+7 34 has taken a fork
+7 34 has taken a fork
+7 40 is thinking
+7 44 is thinking
+7 50 is thinking
+7 60 is thinking
+7 64 is thinking
+7 68 is thinking
+7 18 is eating
+7 76 is thinking
+7 54 is eating
+7 84 is thinking
+7 88 is thinking
+7 94 is thinking
+7 94 has taken a fork
+7 94 has taken a fork
+7 102 is thinking
+7 112 is thinking
+7 34 is eating
+7 122 is thinking
+7 126 is thinking
+7 126 has taken a fork
+7 126 has taken a fork
+7 130 is thinking
+8 134 is thinking
+8 134 has taken a fork
+8 134 has taken a fork
+8 146 is thinking
+8 146 has taken a fork
+8 146 has taken a fork
+8 152 is thinking
+8 152 has taken a fork
+8 152 has taken a fork
+8 138 is eating
+8 158 is thinking
+8 162 is thinking
+8 170 is thinking
+8 174 is thinking
+8 180 is thinking
+8 164 is eating
+8 198 is thinking
+8 198 has taken a fork
+8 198 has taken a fork
+8 8 has taken a fork
+8 8 has taken a fork
+8 2 is eating
+8 6 is eating
+8 22 is thinking
+8 22 has taken a fork
+8 22 has taken a fork
+8 146 is eating
+8 12 is eating
+8 186 is eating
+8 188 is eating
+8 14 is eating
+8 194 is eating
+8 38 is thinking
+8 38 has taken a fork
+8 38 has taken a fork
+8 40 has taken a fork
+8 40 has taken a fork
+8 46 is thinking
+8 46 has taken a fork
+8 46 has taken a fork
+8 50 has taken a fork
+8 50 has taken a fork
+8 28 is eating
+8 58 is thinking
+8 58 has taken a fork
+8 58 has taken a fork
+8 66 is thinking
+8 64 has taken a fork
+8 64 has taken a fork
+8 72 is thinking
+8 68 has taken a fork
+8 68 has taken a fork
+8 48 is eating
+8 76 has taken a fork
+8 76 has taken a fork
+8 80 is thinking
+9 86 is thinking
+9 86 has taken a fork
+9 86 has taken a fork
+9 88 has taken a fork
+9 88 has taken a fork
+9 96 is thinking
+9 100 is thinking
+9 112 has taken a fork
+9 112 has taken a fork
+9 118 is thinking
+9 120 is thinking
+9 120 has taken a fork
+9 120 has taken a fork
+9 22 is eating
+9 38 is eating
+9 58 is eating
+9 150 is thinking
+9 158 has taken a fork
+9 158 has taken a fork
+9 142 is eating
+9 162 has taken a fork
+9 162 has taken a fork
+9 172 is thinking
+9 172 has taken a fork
+9 172 has taken a fork
+9 86 is eating
+9 174 has taken a fork
+9 174 has taken a fork
+9 184 is thinking
+9 184 has taken a fork
+9 184 has taken a fork
+9 192 is thinking
+9 192 has taken a fork
+9 192 has taken a fork
+9 126 is eating
+9 112 is eating
+9 134 is eating
+9 26 is thinking
+9 26 has taken a fork
+9 26 has taken a fork
+9 42 is thinking
+9 42 has taken a fork
+9 42 has taken a fork
+9 44 has taken a fork
+9 44 has taken a fork
+9 56 is thinking
+9 56 has taken a fork
+9 56 has taken a fork
+9 70 is thinking
+9 72 has taken a fork
+9 72 has taken a fork
+9 82 is thinking
+9 82 has taken a fork
+9 82 has taken a fork
+9 90 is thinking
+9 90 has taken a fork
+9 90 has taken a fork
+9 96 has taken a fork
+9 96 has taken a fork
+9 104 is thinking
+9 110 is thinking
+9 110 has taken a fork
+9 110 has taken a fork
+9 8 is eating
+10 184 is eating
+10 106 is eating
+10 128 is thinking
+10 128 has taken a fork
+10 128 has taken a fork
+10 46 is eating
+10 50 is eating
+10 144 is thinking
+10 144 has taken a fork
+10 144 has taken a fork
+10 154 is thinking
+10 154 has taken a fork
+10 154 has taken a fork
+10 150 has taken a fork
+10 150 has taken a fork
+10 166 is thinking
+10 166 has taken a fork
+10 166 has taken a fork
+10 76 is eating
+10 176 is thinking
+10 176 has taken a fork
+10 176 has taken a fork
+10 88 is eating
+10 82 is eating
+10 90 is eating
+10 20 is thinking
+10 152 is eating
+10 120 is eating
+10 60 has taken a fork
+10 60 has taken a fork
+10 66 has taken a fork
+10 66 has taken a fork
+10 52 is eating
+10 78 is thinking
+10 78 has taken a fork
+10 78 has taken a fork
+10 92 is thinking
+10 92 has taken a fork
+10 92 has taken a fork
+10 104 has taken a fork
+10 104 has taken a fork
+10 100 has taken a fork
+10 100 has taken a fork
+10 114 is thinking
+10 116 is thinking
+10 174 is eating
+10 118 has taken a fork
+10 118 has taken a fork
+10 158 is eating
+10 192 is eating
+10 130 has taken a fork
+10 130 has taken a fork
+10 40 is eating
+10 148 is thinking
+10 148 has taken a fork
+10 148 has taken a fork
+10 160 is thinking
+10 160 has taken a fork
+10 160 has taken a fork
+10 64 is eating
+10 56 is eating
+10 68 is eating
+10 170 has taken a fork
+10 170 has taken a fork
+10 178 is thinking
+10 144 is eating
+10 196 is thinking
+10 196 has taken a fork
+10 196 has taken a fork
+10 96 is eating
+10 190 is eating
+10 20 has taken a fork
+10 20 has taken a fork
+10 166 is eating
+10 200 is eating
+10 110 is eating
+11 74 is thinking
+11 74 has taken a fork
+11 74 has taken a fork
+11 84 has taken a fork
+11 84 has taken a fork
+11 92 is eating
+11 198 is eating
+11 172 is eating
+11 124 is thinking
+11 124 has taken a fork
+11 124 has taken a fork
+11 26 is eating
+11 118 is eating
+11 130 is eating
+11 44 is eating
+11 180 has taken a fork
+11 180 has taken a fork
+11 178 has taken a fork
+11 178 has taken a fork
+11 154 is eating
+11 4 is thinking
+11 4 has taken a fork
+11 4 has taken a fork
+11 30 is thinking
+11 30 has taken a fork
+11 30 has taken a fork
+11 176 is eating
+11 60 is eating
+11 78 is eating
+11 70 has taken a fork
+11 70 has taken a fork
+11 98 is thinking
+11 100 is eating
+11 116 has taken a fork
+11 116 has taken a fork
+11 196 is eating
+11 94 is eating
+11 72 is eating
+11 148 is eating
+11 150 is eating
+11 16 is thinking
+11 16 has taken a fork
+11 16 has taken a fork
+11 36 is thinking
+11 36 has taken a fork
+11 36 has taken a fork
+11 66 is eating
+11 80 has taken a fork
+11 80 has taken a fork
+11 104 is eating
+11 98 has taken a fork
+11 98 has taken a fork
+11 114 has taken a fork
+11 114 has taken a fork
+11 102 has taken a fork
+11 102 has taken a fork
+11 20 is eating
+11 128 is eating
+11 42 is eating
+11 24 is thinking
+11 162 is eating
+11 24 has taken a fork
+11 24 has taken a fork
+11 62 is thinking
+11 62 has taken a fork
+11 62 has taken a fork
+11 122 has taken a fork
+11 122 has taken a fork
+11 84 is eating
+11 170 is eating
+11 74 is eating
+11 160 is eating
+11 124 is eating
+11 180 is eating
+11 178 is eating
+11 4 is eating
+11 30 is eating
+12 70 is eating
+12 116 is eating
+12 16 is eating
+12 80 is eating
+12 36 is eating
+12 98 is eating
+12 114 is eating
+12 102 is eating
+12 62 is eating
+12 122 is eating
+12 24 is eating
+21 1 is thinking
+21 5 is thinking
+21 9 is thinking
+21 11 is thinking
+21 13 is thinking
+21 15 is thinking
+21 17 is thinking
+21 19 is thinking
+21 21 is thinking
+21 23 is thinking
+22 25 is thinking
+22 29 is thinking
+22 35 is thinking
+22 37 is thinking
+22 39 is thinking
+22 43 is thinking
+22 45 is thinking
+22 41 is thinking
+22 47 is thinking
+22 51 is thinking
+22 55 is thinking
+23 61 is thinking
+23 59 is thinking
+23 63 is thinking
+23 65 is thinking
+23 67 is thinking
+23 69 is thinking
+23 71 is thinking
+23 73 is thinking
+23 77 is thinking
+23 75 is thinking
+23 79 is thinking
+23 81 is thinking
+23 83 is thinking
+23 85 is thinking
+23 87 is thinking
+23 89 is thinking
+23 93 is thinking
+23 91 is thinking
+23 97 is thinking
+23 95 is thinking
+23 99 is thinking
+23 101 is thinking
+23 103 is thinking
+24 105 is thinking
+24 111 is thinking
+24 113 is thinking
+24 115 is thinking
+24 117 is thinking
+24 119 is thinking
+24 121 is thinking
+24 123 is thinking
+24 125 is thinking
+24 127 is thinking
+24 131 is thinking
+24 135 is thinking
+25 137 is thinking
+25 139 is thinking
+25 145 is thinking
+25 147 is thinking
+25 151 is thinking
+25 153 is thinking
+25 155 is thinking
+25 159 is thinking
+25 161 is thinking
+25 167 is thinking
+26 171 is thinking
+26 173 is thinking
+26 175 is thinking
+26 177 is thinking
+26 179 is thinking
+26 191 is thinking
+26 193 is thinking
+26 197 is thinking
+26 199 is thinking
+26 3 is thinking
+26 7 is thinking
+27 27 is thinking
+27 31 is thinking
+27 57 is thinking
+27 107 is thinking
+28 165 is thinking
+28 183 is thinking
+28 189 is thinking
+28 195 is thinking
+28 53 is thinking
+436 32 is sleeping
+436 156 is sleeping
+436 51 has taken a fork
+436 51 has taken a fork
+436 144 is sleeping
+436 65 has taken a fork
+436 65 has taken a fork
+436 135 has taken a fork
+436 24 is sleeping
+436 135 has taken a fork
+436 119 has taken a fork
+436 165 has taken a fork
+436 119 has taken a fork
+436 165 has taken a fork
+436 29 has taken a fork
+436 33 is thinking
+436 29 has taken a fork
+436 33 has taken a fork
+436 196 is sleeping
+436 33 has taken a fork
+436 18 is sleeping
+436 100 is sleeping
+436 49 is thinking
+436 49 has taken a fork
+436 120 is sleeping
+436 49 has taken a fork
+436 143 is thinking
+436 143 has taken a fork
+436 72 is sleeping
+436 143 has taken a fork
+436 15 has taken a fork
+436 164 is sleeping
+436 15 has taken a fork
+436 30 is sleeping
+436 108 is sleeping
+436 140 is sleeping
+436 79 has taken a fork
+436 92 is sleeping
+436 79 has taken a fork
+436 26 is sleeping
+436 23 has taken a fork
+436 23 has taken a fork
+436 111 has taken a fork
+436 111 has taken a fork
+436 199 has taken a fork
+436 199 has taken a fork
+436 7 has taken a fork
+436 7 has taken a fork
+436 81 has taken a fork
+436 20 is sleeping
+436 81 has taken a fork
+436 115 has taken a fork
+436 115 has taken a fork
+436 55 has taken a fork
+436 10 is sleeping
+436 55 has taken a fork
+436 159 has taken a fork
+436 46 is sleeping
+436 159 has taken a fork
+436 102 is sleeping
+436 105 has taken a fork
+436 76 is sleeping
+436 105 has taken a fork
+436 78 is sleeping
+436 8 is sleeping
+436 194 is sleeping
+436 60 is sleeping
+436 28 is sleeping
+436 34 is sleeping
+436 171 has taken a fork
+436 171 has taken a fork
+436 97 has taken a fork
+436 106 is sleeping
+436 97 has taken a fork
+436 124 is sleeping
+436 129 is thinking
+436 129 has taken a fork
+436 129 has taken a fork
+436 155 has taken a fork
+436 186 is sleeping
+436 155 has taken a fork
+436 139 has taken a fork
+436 139 has taken a fork
+436 31 has taken a fork
+436 130 is sleeping
+436 31 has taken a fork
+436 177 has taken a fork
+436 177 has taken a fork
+436 85 has taken a fork
+436 4 is sleeping
+436 85 has taken a fork
+436 50 is sleeping
+436 112 is sleeping
+436 117 has taken a fork
+436 117 has taken a fork
+436 12 is sleeping
+436 6 is sleeping
+437 57 has taken a fork
+437 48 is sleeping
+437 57 has taken a fork
+437 27 has taken a fork
+437 27 has taken a fork
+437 158 is sleeping
+437 123 has taken a fork
+437 123 has taken a fork
+437 116 is sleeping
+437 74 is sleeping
+437 188 is sleeping
+437 51 is eating
+437 14 is sleeping
+437 84 is sleeping
+437 165 is eating
+437 83 has taken a fork
+437 83 has taken a fork
+437 119 is eating
+437 141 is thinking
+437 141 has taken a fork
+437 118 is sleeping
+437 141 has taken a fork
+437 75 has taken a fork
+437 75 has taken a fork
+437 191 has taken a fork
+437 191 has taken a fork
+437 167 has taken a fork
+437 167 has taken a fork
+437 73 has taken a fork
+437 15 is eating
+437 73 has taken a fork
+437 133 is thinking
+437 133 has taken a fork
+437 133 has taken a fork
+437 143 is eating
+437 25 has taken a fork
+437 25 has taken a fork
+437 150 is sleeping
+437 145 has taken a fork
+437 145 has taken a fork
+437 193 has taken a fork
+437 193 has taken a fork
+437 91 has taken a fork
+437 169 is thinking
+437 91 has taken a fork
+437 59 has taken a fork
+437 59 has taken a fork
+437 111 is eating
+437 90 is sleeping
+437 44 is sleeping
+437 149 is thinking
+437 69 has taken a fork
+437 69 has taken a fork
+437 79 is eating
+437 23 is eating
+437 86 is sleeping
+437 54 is sleeping
+437 77 has taken a fork
+437 192 is sleeping
+437 77 has taken a fork
+437 162 is sleeping
+437 131 has taken a fork
+437 131 has taken a fork
+437 159 is eating
+437 178 is sleeping
+437 67 has taken a fork
+437 67 has taken a fork
+437 21 has taken a fork
+437 21 has taken a fork
+437 163 is thinking
+437 163 has taken a fork
+437 163 has taken a fork
+437 93 has taken a fork
+437 82 is sleeping
+437 93 has taken a fork
+437 153 has taken a fork
+437 181 is thinking
+437 153 has taken a fork
+437 181 has taken a fork
+437 94 is sleeping
+437 181 has taken a fork
+437 1 has taken a fork
+437 1 has taken a fork
+437 45 has taken a fork
+437 45 has taken a fork
+437 171 is eating
+437 97 is eating
+437 155 is eating
+437 39 has taken a fork
+437 39 has taken a fork
+437 179 has taken a fork
+437 179 has taken a fork
+437 174 is sleeping
+437 31 is eating
+437 177 is eating
+437 57 is eating
+437 123 is eating
+437 187 is thinking
+437 187 has taken a fork
+437 187 has taken a fork
+437 99 has taken a fork
+437 88 is sleeping
+437 99 has taken a fork
+437 197 has taken a fork
+437 109 is thinking
+437 197 has taken a fork
+437 109 has taken a fork
+437 109 has taken a fork
+437 180 is sleeping
+437 185 is thinking
+437 185 has taken a fork
+437 185 has taken a fork
+437 170 is sleeping
+437 11 has taken a fork
+437 11 has taken a fork
+437 75 is eating
+437 43 has taken a fork
+437 43 has taken a fork
+437 141 is eating
+437 83 is eating
+437 19 has taken a fork
+437 19 has taken a fork
+437 191 is eating
+437 137 has taken a fork
+437 137 has taken a fork
+437 175 has taken a fork
+437 175 has taken a fork
+437 133 is eating
+437 103 has taken a fork
+437 103 has taken a fork
+437 25 is eating
+466 110 is sleeping
+476 173 has taken a fork
+476 173 has taken a fork
+476 183 has taken a fork
+476 58 is sleeping
+476 183 has taken a fork
+476 173 is eating
+476 183 is eating
+477 95 has taken a fork
+477 127 has taken a fork
+477 95 has taken a fork
+477 127 has taken a fork
+477 136 is sleeping
+477 126 is sleeping
+477 128 is sleeping
+477 184 is sleeping
+477 151 has taken a fork
+477 36 is sleeping
+477 151 has taken a fork
+477 107 has taken a fork
+477 107 has taken a fork
+477 189 has taken a fork
+477 189 has taken a fork
+477 104 is sleeping
+477 157 is thinking
+477 157 has taken a fork
+477 157 has taken a fork
+477 40 is sleeping
+477 38 is sleeping
+477 101 has taken a fork
+477 68 is sleeping
+477 101 has taken a fork
+477 17 has taken a fork
+477 56 is sleeping
+477 17 has taken a fork
+477 161 has taken a fork
+477 134 is sleeping
+477 161 has taken a fork
+477 64 is sleeping
+477 154 is sleeping
+477 190 is sleeping
+477 172 is sleeping
+477 114 is sleeping
+477 47 has taken a fork
+477 168 is sleeping
+477 47 has taken a fork
+477 41 has taken a fork
+477 41 has taken a fork
+477 125 has taken a fork
+477 125 has taken a fork
+477 89 has taken a fork
+477 89 has taken a fork
+477 63 has taken a fork
+477 63 has taken a fork
+477 37 has taken a fork
+477 37 has taken a fork
+477 87 has taken a fork
+477 87 has taken a fork
+478 52 is sleeping
+478 66 is sleeping
+478 13 has taken a fork
+478 13 has taken a fork
+478 146 is sleeping
+478 147 has taken a fork
+478 147 has taken a fork
+478 22 is sleeping
+478 142 is sleeping
+478 198 is sleeping
+478 148 is sleeping
+478 53 has taken a fork
+478 16 is sleeping
+478 53 has taken a fork
+478 42 is sleeping
+478 182 is sleeping
+478 122 is sleeping
+478 121 has taken a fork
+478 121 has taken a fork
+478 127 is eating
+478 151 is eating
+478 107 is eating
+478 166 is sleeping
+478 101 is eating
+478 161 is eating
+478 157 is eating
+478 17 is eating
+478 47 is eating
+478 125 is eating
+478 41 is eating
+478 89 is eating
+478 135 is eating
+478 63 is eating
+478 29 is eating
+478 71 has taken a fork
+478 71 has taken a fork
+478 33 is eating
+478 49 is eating
+478 113 has taken a fork
+478 113 has taken a fork
+478 169 has taken a fork
+478 169 has taken a fork
+478 7 is eating
+478 13 is eating
+478 160 is sleeping
+478 149 has taken a fork
+478 149 has taken a fork
+478 5 has taken a fork
+478 147 is eating
+478 5 has taken a fork
+478 35 has taken a fork
+478 35 has taken a fork
+478 199 is eating
+478 81 is eating
+478 55 is eating
+478 62 is sleeping
+478 195 has taken a fork
+478 105 is eating
+478 195 has taken a fork
+478 129 is eating
+478 121 is eating
+478 167 is eating
+478 152 is sleeping
+478 61 has taken a fork
+478 61 has taken a fork
+478 132 is sleeping
+478 98 is sleeping
+478 197 is eating
+478 181 is eating
+478 1 is eating
+478 73 is eating
+478 193 is eating
+478 145 is eating
+478 85 is eating
+478 179 is eating
+478 185 is eating
+478 117 is eating
+478 99 is eating
+478 103 is eating
+479 71 is eating
+479 200 is sleeping
+479 19 is eating
+479 169 is eating
+479 109 is eating
+479 43 is eating
+479 187 is eating
+479 93 is eating
+479 189 is eating
+479 195 is eating
+479 61 is eating
+479 139 is eating
+479 2 is sleeping
+479 70 is sleeping
+479 37 is eating
+479 65 is eating
+479 9 has taken a fork
+479 9 has taken a fork
+479 87 is eating
+479 96 is sleeping
+479 115 is eating
+479 53 is eating
+479 27 is eating
+479 80 is sleeping
+479 3 has taken a fork
+479 3 has taken a fork
+479 138 is sleeping
+479 67 is eating
+479 59 is eating
+479 176 is sleeping
+479 163 is eating
+479 175 is eating
+479 39 is eating
+479 21 is eating
+479 45 is eating
+479 149 is eating
+479 5 is eating
+479 69 is eating
+479 35 is eating
+479 137 is eating
+479 113 is eating
+479 91 is eating
+480 153 is eating
+480 95 is eating
+480 77 is eating
+480 131 is eating
+480 11 is eating
+480 9 is eating
+480 3 is eating
+636 32 is thinking
+636 156 is thinking
+636 144 is thinking
+636 100 is thinking
+636 72 is thinking
+636 24 is thinking
+636 108 is thinking
+636 92 is thinking
+636 196 is thinking
+636 18 is thinking
+636 10 is thinking
+636 102 is thinking
+636 164 is thinking
+636 60 is thinking
+636 194 is thinking
+636 34 is thinking
+636 28 is thinking
+636 26 is thinking
+636 106 is thinking
+636 186 is thinking
+636 78 is thinking
+637 140 is thinking
+637 30 is thinking
+637 116 is thinking
+637 158 is thinking
+637 188 is thinking
+637 20 is thinking
+637 84 is thinking
+637 14 is thinking
+637 119 is sleeping
+637 15 is sleeping
+637 143 is sleeping
+637 8 is thinking
+637 111 is sleeping
+637 86 is thinking
+637 90 is thinking
+637 54 is thinking
+637 4 is thinking
+637 79 is sleeping
+637 159 is sleeping
+637 178 is thinking
+637 171 is sleeping
+637 94 is thinking
+637 48 is thinking
+637 31 is sleeping
+637 12 is thinking
+637 174 is thinking
+637 192 is thinking
+637 177 is sleeping
+637 124 is thinking
+637 123 is sleeping
+637 88 is thinking
+637 180 is thinking
+637 150 is thinking
+637 170 is thinking
+637 130 is thinking
+637 141 is sleeping
+637 191 is sleeping
+637 78 has taken a fork
+637 164 has taken a fork
+637 46 is thinking
+637 140 has taken a fork
+637 74 is thinking
+637 112 is thinking
+638 192 has taken a fork
+638 144 has taken a fork
+638 26 has taken a fork
+638 32 has taken a fork
+638 178 has taken a fork
+638 51 is sleeping
+638 57 is sleeping
+638 165 is sleeping
+638 14 has taken a fork
+638 155 is sleeping
+638 118 is thinking
+638 118 has taken a fork
+638 124 has taken a fork
+638 84 has taken a fork
+638 50 is thinking
+638 30 has taken a fork
+638 156 has taken a fork
+638 76 is thinking
+638 75 is sleeping
+638 133 is sleeping
+638 25 is sleeping
+638 83 is sleeping
+638 24 has taken a fork
+638 23 is sleeping
+638 24 has taken a fork
+638 6 is thinking
+638 162 is thinking
+638 97 is sleeping
+638 82 is thinking
+638 82 has taken a fork
+638 74 has taken a fork
+638 112 has taken a fork
+638 158 has taken a fork
+639 170 has taken a fork
+639 44 is thinking
+639 24 is eating
+639 50 has taken a fork
+639 76 has taken a fork
+639 120 is thinking
+639 120 has taken a fork
+908 40 died
