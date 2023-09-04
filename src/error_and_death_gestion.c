@@ -6,7 +6,7 @@
 /*   By: edecoste <edecoste@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 15:02:58 by edecoste          #+#    #+#             */
-/*   Updated: 2023/09/04 16:21:40 by edecoste         ###   ########.fr       */
+/*   Updated: 2023/09/04 16:46:02 by edecoste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	error_check(int argc, char **argv)
 {
-	// int	nbr;
+	int	nbr;
 	int	i;
 	int	j;
 
@@ -27,9 +27,9 @@ int	error_check(int argc, char **argv)
 		while (argv[i][++j])
 			if (argv[i][j] < 48 || argv[i][j] > 57)
 				return (putendl_fd(BAD_ARG, 1), 1);
-		// nbr = ft_atoi(argv[i]);
-		// if (nbr <= 0)
-		// 	return (putendl_fd(BAD_ARG, 1), 1);
+		nbr = ft_atoi(argv[i]);
+		if (nbr <= 0)
+			return (putendl_fd(BAD_ARG, 1), 1);
 	}
 	return (0);
 }
