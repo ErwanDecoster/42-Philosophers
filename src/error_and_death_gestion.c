@@ -6,7 +6,7 @@
 /*   By: edecoste <edecoste@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 15:02:58 by edecoste          #+#    #+#             */
-/*   Updated: 2023/09/04 16:46:02 by edecoste         ###   ########.fr       */
+/*   Updated: 2023/10/12 15:46:45 by edecoste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,12 @@ int	error_check(int argc, char **argv)
 	return (0);
 }
 
-static int	check_death(t_philo *philo)
+int	check_death(t_philo *philo)
 {
 	long long	time;
 
+	if (philo == NULL)
+		return (1);
 	time = get_time() - philo->last_meal_time;
 	if (philo->data->death == 1)
 		return (0);
@@ -58,7 +60,7 @@ int	death_check_loop(t_data *data)
 
 	while (1)
 	{
-		ft_usleep(3);
+		ft_usleep(3, NULL);
 		i = -1;
 		while (++i < data->nb_philos)
 		{

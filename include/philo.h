@@ -6,7 +6,7 @@
 /*   By: edecoste <edecoste@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 13:28:52 by edecoste          #+#    #+#             */
-/*   Updated: 2023/09/04 16:06:04 by edecoste         ###   ########.fr       */
+/*   Updated: 2023/10/12 16:13:46 by edecoste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ void		*philo_routine(void *arg);
 /*	error_and_death_gestion.c	*/
 int			error_check(int argc, char **argv);
 int			death_check_loop(t_data *data);
+int			check_death(t_philo *philo);
 
 /*	main.c	*/
 int			main(int argc, char **argv);
@@ -69,7 +70,7 @@ int			main(int argc, char **argv);
 void		putendl_fd(char *s, int fd);
 int			ft_atoi(const char *str);
 void		ft_bzero(void *s, size_t n);
-void		ft_usleep(long long waiting);
+void		ft_usleep(long long waiting, t_philo *philo);
 
 /*	utils.c	*/
 int			get_forks(t_philo *philo);

@@ -6,7 +6,7 @@
 /*   By: edecoste <edecoste@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 10:13:10 by edecoste          #+#    #+#             */
-/*   Updated: 2023/09/04 16:33:52 by edecoste         ###   ########.fr       */
+/*   Updated: 2023/10/12 16:06:44 by edecoste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static int	mutex_init(t_data *data)
 
 	i = -1;
 	if (pthread_mutex_init(&data->m_pause, NULL) != 0)
-		return (putendl_fd(MUTEX, 1), free(data->philo), free(data->m_forks), \
+		return (putendl_fd(MUTEX, 2), free(data->philo), free(data->m_forks), \
 				free(data->forks_id), 0);
 	while (++i < data->nb_philos)
 	{
@@ -93,7 +93,7 @@ static int	threads_init(t_data *data)
 	while (++i < data->nb_philos)
 		if (pthread_create(&data->philo[i].thread, NULL, philo_routine, \
 			&data->philo[i]) != 0)
-			return (free(data->philo), putendl_fd(TRHREAD_CR, 1), \
+			return (putendl_fd(TRHREAD_CR, 1), \
 					pthread_mutex_unlock(&data->m_pause), 0);
 	data->start_time = get_time();
 	pthread_mutex_unlock(&data->m_pause);
@@ -101,7 +101,7 @@ static int	threads_init(t_data *data)
 	death_check_loop(data);
 	while (++i < data->nb_philos)
 		if (pthread_join(data->philo[i].thread, NULL) != 0)
-			return (free(data->philo), putendl_fd(THR_JOIN, 1), 0);
+			return (putendl_fd(THR_JOIN, 1), 0);
 	return (1);
 }
 

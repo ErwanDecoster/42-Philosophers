@@ -6,7 +6,7 @@
 /*   By: edecoste <edecoste@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/16 11:04:29 by edecoste          #+#    #+#             */
-/*   Updated: 2023/09/04 16:36:21 by edecoste         ###   ########.fr       */
+/*   Updated: 2023/10/12 15:45:36 by edecoste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static int	sleeping(t_philo *philo)
 	if (philo->data->death == 0)
 		printf("%lld %d is sleeping\n", time, philo->id);
 	pthread_mutex_unlock(&philo->data->m_pause);
-	usleep(philo->data->tt_sleep * 1000);
+	ft_usleep(philo->data->tt_sleep, philo);
 	return (1);
 }
 
@@ -57,7 +57,7 @@ static int	eat(t_philo *philo)
 		philo->last_meal_time = get_time();
 		philo->meals++;
 		pthread_mutex_unlock(&philo->data->m_pause);
-		usleep(philo->data->tt_eat * 1000);
+		ft_usleep(philo->data->tt_eat, philo);
 	}
 	release_fork(philo, philo->l_fork_id);
 	release_fork(philo, philo->r_fork_id);

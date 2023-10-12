@@ -6,7 +6,7 @@
 /*   By: edecoste <edecoste@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/16 10:20:45 by edecoste          #+#    #+#             */
-/*   Updated: 2023/09/04 16:33:57 by edecoste         ###   ########.fr       */
+/*   Updated: 2023/10/12 16:01:22 by edecoste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ void	destroy_mutexes(t_data *data)
 {
 	int	i;
 
-	i = 0;
+	i = -1;
 	while (++i < data->nb_philos)
 		pthread_mutex_destroy(&data->m_forks[i]);
 	pthread_mutex_destroy(&data->m_pause);

@@ -6,7 +6,7 @@
 /*   By: edecoste <edecoste@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 14:32:10 by edecoste          #+#    #+#             */
-/*   Updated: 2023/09/04 16:34:01 by edecoste         ###   ########.fr       */
+/*   Updated: 2023/10/12 15:44:26 by edecoste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,11 +71,15 @@ void	ft_bzero(void *s, size_t n)
 		str[i++] = 0;
 }
 
-void	ft_usleep(long long waiting)
+void	ft_usleep(long long waiting, t_philo *philo)
 {
 	long long	time;
 
 	time = get_time();
 	while ((get_time() - time) < waiting)
+	{
 		usleep(100);
+		if (check_death(philo) == 0)
+			return ;
+	}
 }
